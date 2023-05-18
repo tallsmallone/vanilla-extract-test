@@ -17,6 +17,10 @@
     "lint:fix": "eslint --fix"
   },
   "lint-staged": {
+    "*.ts": [
+      "yarn lint",
+      "prettier --write --ignore-unknown"
+    ],
     "**/*": [
       "prettier --write --ignore-unknown"
     ]
